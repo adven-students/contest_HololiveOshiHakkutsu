@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>推し発掘</title>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="contents">
+        <div class="block">
+            
+            <a href="question.html">
+                <img src="推し活素材/画像/START.png" width="320px"  class="start">
+            </a>
+
+        </div>
+        <div class="title">
+            <img src="推し活素材/画像/推し発掘.png" width="700px">
+        </div>
+    </div>
+    <audio id="bgm" src="推し活素材/効果音/BGM2.mp3"></audio>
+    <script>
+        function playBGM() {
+            let bgm = document.getElementById("bgm");
+            bgm.src = "推し活素材/効果音/BGM2.mp3";
+            bgm.play();
+        }
+        window.addEventListener("click", playBGM, { once: true });
+    </script>
+
+<audio id="click" src="推し活素材/効果音/クリック音.mp3"></audio>
+<audio id="bgm" src="推し活素材/効果音/BGM2.mp3"></audio>
+<script>
+  function playclick() {
+    let click = document.getElementById("click");
+    click.src = "推し活素材/効果音/クリック音.mp3";
+    click.play();
+  }
+  function playBGM() {
+    let bgm = document.getElementById("bgm");
+    bgm.src = "推し活素材/効果音/BGM2.mp3";
+    bgm.play();
+  }
+  window.addEventListener("click", playclick);
+  window.addEventListener("click", playBGM, { once: true });
+</script>
+
+
+</body>
+
+</html>

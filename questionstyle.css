@@ -1,0 +1,104 @@
+@font-face { 
+    /* ① ここにfont-familyで指定したい名前を書く*/
+    font-family: "myfont"; 
+  
+    /* フォントが置かれているパスを書く */ 
+    src: url("推し活素材/フォント/poprumcute/poprumcute/PopRumCute.otf") format("truetype") 
+  }
+  
+
+body {
+    background-image: url("推し活素材/画像/本文用画面（青）.png");
+    background-position: center;
+    /* 画像の表示位置を指定 */
+    background-size: cover;
+    /* 画像のサイズを指定  */
+    width: 100%;
+    /* 横幅のサイズを指定  */
+    /* height: 680px; */
+    /* 縦幅のサイズを指定  */
+    overflow-x: hidden;
+}
+
+#contents {
+    position: relative;
+}
+
+.block {
+    position: absolute;
+    top: 200px;
+    /* #contents内の上から何pxか */
+
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+    color: #4f4f4f;
+}
+
+.question-box {
+    font-family: myfont;
+    border: 10px outset #9DC5DF;
+    background-color: white;
+    width: 600px;
+    text-align: center;
+    height: 200px;
+    /* #contents内の上から何pxか */
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.toi {
+    font-family: myfont;
+    margin: 10px;
+}
+
+.NEXT{
+    margin: 15px;
+}
+
+li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  ul{
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+  }
+
+  .NEXT:hover{
+  animation: bounce 0.5s ease;
+}
+
+  .result:hover{
+  animation: bounce 0.5s ease;
+}
+
+    /* アニメーションの基本設定 */
+@keyframes bounce {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  30% {
+    transform: translateY(-10px) scale(1.1);
+  }
+  50% {
+    transform: translateY(0) scale(0.9);
+  }
+  70% {
+    transform: translateY(-5px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+.rabit{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

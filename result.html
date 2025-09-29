@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link href="result.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- <div><img class="rabit" src="推し活素材/画像/ファンサうさぎ（桃）.png"></div> -->
+    <div id="contents">
+        <div class="block">
+            <div class="question-box"><br>Result
+                <div class="question" id="1" style="display: block;">
+
+                    <div class="toi">あなたの推し候補が見つかりました!!</div>
+
+                </div>
+            </div>
+        </div>
+        <div class="oshis">
+            <div id="imageContainer"></div>
+        </div>
+
+    </div>
+    <div>
+        <img class="rabit" src="推し活素材/画像/ファンサうさぎ（黄）.png">
+
+        <a href="index.html" class="retry">
+            <img src="推し活素材/画像/RETRY.png" width="320px" class="retry">
+        </a>
+    </div>
+
+
+
+    <audio id="click" src="推し活素材/効果音/クリック音.mp3"></audio>
+    <audio id="bgm" src="推し活素材/効果音/BGM2.mp3"></audio>
+
+    <script>
+
+        let top_three = sessionStorage.getItem("topnames");
+        // top_three = JSON.parse(sessionStorage.getItem("autosave"));
+        // let test = []
+        // for (let index = 0; index < top_three.length; index++) {
+        //     const test = top_three[index];
+        //     console.log(test)
+        // }
+        top_three = JSON.parse(top_three);
+
+
+        // top_three.addEventListener("change", () => {
+        //     sessionStorage.setItem("autosave", top_three.value);
+        // });
+
+        const container = document.getElementById("imageContainer");
+        top_three.forEach(elm => {
+            const name = elm["name"];
+            const URL = elm["url"];
+            console.log(elm);
+            const div = document.createElement("div");
+            div.classList.add("holomem");
+
+            // ホロメンの画像
+            const img = document.createElement("img");
+            img.src = "推し活素材/画像/Holo/" + URL;
+            img.alt = name;
+            img.classList.add("name");
+            img.width = "250";
+            img.height = "250";
+
+
+            //　ホロメンの名前
+            const title = document.createElement("p");
+            title.textContent = name;
+
+            div.appendChild(img);
+            div.appendChild(title);
+
+            container.appendChild(div);
+        });
+
+        function playclick() {
+            let click = document.getElementById("click");
+            click.src = "推し活素材/効果音/クリック音.mp3";
+            click.play();
+        }
+        function playBGM() {
+            let bgm = document.getElementById("bgm");
+            bgm.src = "推し活素材/効果音/BGM2.mp3";
+            bgm.play();
+        }
+        window.addEventListener("click", playclick);
+        window.addEventListener("click", playBGM, { once: true });
+    </script>
+</body>
+
+</html>

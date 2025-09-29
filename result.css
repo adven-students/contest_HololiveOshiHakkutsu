@@ -1,0 +1,123 @@
+@font-face { 
+    /* ① ここにfont-familyで指定したい名前を書く*/
+    font-family: "myfont"; 
+  
+    /* フォントが置かれているパスを書く */ 
+    src: url("推し活素材/フォント/poprumcute/poprumcute/PopRumCute.otf") format("truetype") 
+}
+
+body {
+    background-image: url("推し活素材/画像/本文用画面（桃）.png");
+    background-position: center;
+    /* 画像の表示位置を指定 */
+    background-size: cover;
+    /* 画像のサイズを指定  */
+    width: 100%;
+    /* 横幅のサイズを指定  */
+    /* height: 680px; */
+    /* 縦幅のサイズを指定  */
+    overflow-x: hidden;
+}
+
+#contents {
+    position: relative;
+}
+
+.block {
+
+    margin: 30px auto;
+    text-align: center;
+    color: #4f4f4f;
+}
+
+.question-box {
+    font-family: myfont;
+    border: 10px outset #ffeb77;
+    background-color: white;
+    width: 600px;
+    text-align: center;
+    height: 100px;
+    /* #contents内の上から何pxか */
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.oshis{
+    font-family: myfont;
+    color: #4f4f4f;
+    display: flex;
+    justify-content: center;
+    /* #contents内の上から何pxか */
+
+    margin: 0 auto;
+    text-align: center;
+}
+
+#imageContainer{
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); */
+    width: 100%;
+}
+.holomem {
+    margin: 15px;
+    display: inline-block;
+}
+
+.retry{
+    /* position: absolute;
+    top: 550px;
+    left: 605px; */
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: -1rem;
+    z-index: 999;
+}
+
+img.name{
+    position:relative;
+	top:0;
+}
+
+img.name:hover{
+	top:-10px;
+	transition:0.3s;
+}
+
+.rabit{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.Rkamihubuki{
+    position: absolute;
+}
+
+.Lkamihubuki{
+    position: absolute;
+}
+  .retry:hover{
+  animation: bounce 0.5s ease;
+}
+
+    /* アニメーションの基本設定 */
+@keyframes bounce {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  30% {
+    transform: translateY(-10px) scale(1.1);
+  }
+  50% {
+    transform: translateY(0) scale(0.9);
+  }
+  70% {
+    transform: translateY(-5px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+

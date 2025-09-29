@@ -1,0 +1,60 @@
+body{
+    background-image: url("推し活素材/画像/タイトル画面.png");
+    background-size: cover;
+    overflow: hidden;
+}
+
+#contents {
+	position: relative;
+}
+
+.block {
+	position: absolute;
+	top: 380px; /* #contents内の上から何pxか */
+	
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.start{
+    margin: 0 auto;
+}
+
+.image{
+    width:50px;
+}
+
+.title {
+	position: absolute;
+	top: 100px; /* #contents内の上から何pxか */
+	
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.start:hover{
+  animation: bounce 0.5s ease;
+}
+
+    /* アニメーションの基本設定 */
+@keyframes bounce {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  30% {
+    transform: translateY(-10px) scale(1.1);
+  }
+  50% {
+    transform: translateY(0) scale(0.9);
+  }
+  70% {
+    transform: translateY(-5px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
